@@ -1,0 +1,92 @@
+---------------
+Assignment-3
+---------------
+
+
+1
+ Explore the DVM instructions and prepare a summary of the same atleast for 5 instructions in a detailed format
+
+i) instruction name:
+ii) syntax
+iii)example
+
+
+a.)move vx,vy
+Moves the content of vy into vx. Both registers must be in the first 256 register range.
+x: destination register (4 bits)
+y: source register (4 bits)
+example:
+0110 - move v0, v1
+Moves v1 into v0.
+
+b.)
+throw vx
+Throws an exception object. The reference of the exception object is in vx.
+x: exception-bearing register (8 bits)
+it Throws the indicated exception.
+example:
+2700 - throw v0
+Throws an exception. The exception object reference is in v0.
+
+c.)
+goto target
+Unconditional jump by short offset. 
+example:
+28F0 - goto 0005 // -0010
+Jumps to current position-16 words (hex 10). 0005 is the label of the target instruction.
+
+
+d.)
+new-instance vx,type
+Instantiates an object type and puts the reference of the newly created instance into vx.
+example:
+2200 1500 - new-instance v0, java.io.FileInputStream // type@0015
+Instantiates type@0015 (entry #15H in the type table) and puts its reference into v0.
+
+
+e.)
+array-length vx,vy
+Calculates the number of elements of the array referenced by vy and puts the length value into vx.
+example:
+2111 - array-length v1, v1
+Calculates the number of elements of the array referenced by v1 and puts the result into v1.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+2.
+ Differentiate between mobile and cloud computing?
+ 
+ 
+CLOUD COMPUTING:
+   It allows you to store your files and folders in a “cloud” area on the Internet, allowing you access to all of your files and folders wherever you are in the world – 
+but you do need a physical device with Internet access to access it.
+you can have all your files synchronised between devices so wherever you go, you’ll always have access to your files, but the technology doesn’t fully exist yet.
+ It’s getting there, but it’s slow and temperamental, difficult to use and often the average user (even me, an advanced user) gets confused as to where the files are actually stored and/or where else they are stored. 
+Even though you don’t need to carry round a laptop with you, you still need some physical device to access your service which almost defeats the point anyway.
+ Having everything in your very own secure cloud so you can access anything anywhere is put back by the fact you have to find a computer to use anyway.
+
+MOBILE COMPUTING:
+Mobile computing is human – computer interaction by which a computer is expected to be transported during normal usage.
+It is taking a physical device with you. This could be a laptop or a mobile phone or some device which enables you to telework 
+It  allows you to work wherever you go because of the small size of the device you’re using.
+But You have to open it up, turn it on, plug it in to the mains, get the wireless settings sorted – by the time you’ve done all that faffing around you have to get something else done. 
+It is a  technology that allows transmission of data, via a computer, without having to be connected to a fixed physical link
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+3.
+Give an example of an application simulating an environment of  context aware computing and justify.
+
+
+Suppose the user of a context-aware computing system is new to a place (a city, a mall, a tradeshow etc.),
+and would like to have the system collect the relevant information and give him/her a tour. A good context-aware 
+computing technology enabled system should somehow be able to know its userís available time and his/her interests 
+and preferences. It would tentatively plan a tour for the user, get his/her feedback, and then guide him/her
+point-topoint through the visiting. During the tour, the system should be able to sense the userís emotional states,
+to guide his/her focus of attention, and to respond to the state changes. According to the userís emotional status 
+change, it would consequently adjust the content description details, adaptively include or omit some contents,
+and control the content delivery pace ñ in a manner that a smart human tour guide does naturally.
+
+
+------------------------------------------------------------------------------------------------------------------------------------
